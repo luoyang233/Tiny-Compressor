@@ -22,7 +22,7 @@
   "license": "ISC",
   "build": {
     "appId": "com.tinypng.imagecompressor",
-    "productName": "Tiny Image Compressor",
+    "productName": "Tiny Compressor",
     "directories": {
       "output": "release"
     },
@@ -34,7 +34,8 @@
       "category": "public.app-category.graphics-design",
       "target": [
         "dmg"
-      ]
+      ],
+      "icon": "src/assets/icon.icns"
     },
     "win": {
       "target": [
