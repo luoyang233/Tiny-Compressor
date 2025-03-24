@@ -331,6 +331,9 @@ body {
 
 /* 状态栏 */
 .status-bar {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
   padding: var(--spacing);
   font-size: 0.9rem;
   color: var(--text-light);
@@ -498,4 +501,8 @@ body {
   padding: var(--spacing);
   background-color: var(--card-bg);
   padding-top: 0;
+}
+
+#status-message {
+  color: #fff;
 }
