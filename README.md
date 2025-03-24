@@ -71,6 +71,6 @@ tiny-image-compressor/
 - TypeScript
 - TinyPNG API
 
-## 许可证
+## mac无法运行
+xattr -cr "/Applications/Tiny Compressor.app"
 
-MIT
