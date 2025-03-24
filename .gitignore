@@ -1,0 +1,50 @@
+# 依赖目录
+node_modules/
+
+# 构建输出
+dist/
+release/
+*.js.map
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# 编辑器目录和文件
+.idea/
+.vscode/
+*.swp
+*.swo
+.vs/
+
+# 环境变量文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 包锁定文件 (可以根据团队策略选择是否忽略)
+# package-lock.json
+# yarn.lock
+
+# TypeScript缓存
+*.tsbuildinfo
+
+# 测试覆盖率报告
+coverage/
+
+# macOS图标生成临时文件
+icons/mac/
+icons/win/
+
+# 应用程序存储的用户数据
+userData/ 

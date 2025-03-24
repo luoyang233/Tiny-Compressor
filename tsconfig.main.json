@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2016",
+    "outDir": "./dist",
+    "sourceMap": true
+  },
+  "include": [
+    "src/main/**/*",
+    "src/preload.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+} 

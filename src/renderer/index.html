@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny图片压缩工具</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="app-container" id="app-container">
+      <!-- 标题栏 -->
+      <div class="title-bar"></div>
+
+      <!-- 主内容区 -->
+      <main class="main-content">
+        <!-- 拖放区域 -->
+        <section class="drop-zone" id="drop-zone">
+          <div class="drop-content">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>拖放图片到这里</p>
+          </div>
+        </section>
+
+        <!-- 处理结果区域 -->
+        <section class="results-section" id="results-section">
+          <div class="results-list" id="results-list">
+            <!-- 结果将通过JS动态添加 -->
+          </div>
+        </section>
+      </main>
+
+      <!-- 状态栏 -->
+      <footer class="status-bar">
+        <div id="status-message"></div>
+      </footer>
+
+      <!-- 悬浮按钮 -->
+      <div class="folder-icon" id="folder-icon">
+        <i class="fas fa-folder-open"></i>
+      </div>
+
+      <!-- 设置按钮 -->
+      <div class="settings-icon" id="settings-icon">
+        <i class="fas fa-cog"></i>
+      </div>
+
+      <!-- 设置弹窗 -->
+      <div class="settings-modal" id="settings-modal">
+        <div class="settings-modal-content">
+          <div class="settings-modal-header">
+            <h3>设置</h3>
+            <span class="close-modal" id="close-modal">&times;</span>
+          </div>
+          <div class="settings-modal-body">
+            <div class="api-key-section">
+              <div class="input-group">
+                <label for="api-key">TinyPNG API密钥:</label>
+                <input type="text" id="api-key" placeholder="请输入您的TinyPNG API密钥..." />
+              </div>
+            </div>
+
+            <div class="settings-options">
+              <div class="checkbox-group">
+                <input type="checkbox" id="create-new" checked />
+                <label for="create-new">生成新的压缩图片文件（否则将替换原文件）</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

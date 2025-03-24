@@ -1,0 +1,58 @@
+{
+  "name": "tiny-image-compressor",
+  "version": "1.0.0",
+  "description": "图片压缩工具，使用TinyPNG API",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "npm run build:main && npm run build:renderer && node copy-static.js && electron . --dev",
+    "build": "npm run build:main && npm run build:renderer && node copy-static.js && electron-builder",
+    "build:main": "tsc -p tsconfig.main.json",
+    "build:renderer": "tsc -p tsconfig.renderer.json",
+    "build:mac": "npm run build:main && npm run build:renderer && node copy-static.js && electron-builder --mac",
+    "build:win": "npm run build:main && npm run build:renderer && node copy-static.js && electron-builder --win"
+  },
+  "keywords": [
+    "electron",
+    "image",
+    "compression",
+    "tinypng"
+  ],
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "appId": "com.tinypng.imagecompressor",
+    "productName": "Tiny Image Compressor",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.graphics-design",
+      "target": [
+        "dmg"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "tinify": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/electron-store": "^3.2.0",
+    "@types/node": "^18.16.0",
+    "electron": "^29.1.0",
+    "electron-builder": "^24.12.0",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.4.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

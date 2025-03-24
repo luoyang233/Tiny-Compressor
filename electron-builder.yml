@@ -1,0 +1,47 @@
+appId: com.tinypng.imagecompressor
+productName: Tiny图片压缩工具
+copyright: Copyright © 2025
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - dist/**/*
+  - node_modules/**/*
+  - package.json
+  - "!node_modules/**/*.{ts,map,md}"
+  - "!**/*.d.ts"
+
+extraResources:
+  - from: "src/assets"
+    to: "assets"
+
+mac:
+  category: public.app-category.graphics-design
+  target:
+    - dmg
+    - zip
+  darkModeSupport: true
+  icon: src/assets/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  afterSign: build/notarize.js
+
+win:
+  target:
+    - nsis
+  icon: src/assets/icon.ico
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+
+linux:
+  target:
+    - AppImage
+  category: Graphics 
