@@ -2,6 +2,8 @@
 
 一个基于 Electron 的图片压缩桌面应用程序，使用 TinyPNG API 进行高质量图片压缩。
 
+![应用截图](https://pic1.imgdb.cn/item/67e129710ba3d5a1d7e29695.jpg)
+
 ## 功能特性
 
 - 支持压缩 JPG, PNG, GIF, WEBP 等格式的图片
